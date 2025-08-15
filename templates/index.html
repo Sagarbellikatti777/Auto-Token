@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Welcome</h2>
+    <p>Token: {{ token }}</p>
+    <a href="/logout">Logout</a>
+    <script>
+    const token = "{{ token }}";
+    localStorage.setItem('userToken', token);
+    document.getElementById('tokenDisplay').innerText = 'Token: ' + localStorage.getItem('userToken');
+    </script>
+</body>
+</html>
